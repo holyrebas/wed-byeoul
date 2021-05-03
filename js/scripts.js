@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     /***************** Waypoints ******************/
-
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
     }, {
@@ -54,7 +53,6 @@ $(document).ready(function () {
     });
 
     /***************** Initiate Fancybox ******************/
-
     $('.single_image').fancybox({
         padding: 4
     });
@@ -69,7 +67,6 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     /***************** Nav Transformicon ******************/
-
     /* When user clicks the Icon */
     $('.nav-toggle').click(function () {
         $(this).toggleClass('active');
@@ -84,7 +81,6 @@ $(document).ready(function () {
     });
 
     /***************** Header BG Scroll ******************/
-
     $(function () {
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
@@ -116,8 +112,8 @@ $(document).ready(function () {
             }
         });
     });
-    /***************** Smooth Scrolling ******************/
 
+    /***************** Smooth Scrolling ******************/
     $(function () {
 
         $('a[href*=#]:not([href=#])').click(function () {
@@ -128,7 +124,7 @@ $(document).ready(function () {
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top - 90
-                    }, 2000);
+                    }, 1000);
                     return false;
                 }
             }
@@ -136,34 +132,8 @@ $(document).ready(function () {
 
     });
 
-    /********************** Social Share buttons ***********************/
-    var share_bar = document.getElementsByClassName('share-bar');
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-
-    for (var i = 0; i < share_bar.length; i++) {
-        var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandantara&amp;count=horizontal"' +
-            'style="width:105px; height:21px;">' +
-            '</iframe>' +
-
-            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
-
-            '<div class="g-plusone" data-size="medium"></div>';
-
-        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
-
-        share_bar[i].innerHTML = html;
-        share_bar[i].style.display = 'inline-block';
-    }
-
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
-
 
     /********************** Toggle Map Content **********************/
     $('#btn-show-map').click(function () {
@@ -184,55 +154,49 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "벼울♥요한 결혼식",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Jun 12, 2021 17:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Jun 12, 2021 19:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: '여의도웨딩컨벤션',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "벼울과 요한의 아름다운 결혼식입니다."
         }
     });
 
     $('#add-to-cal').html(myCalendar);
-
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>잠시만 기다려주세요!</strong> 저장 중입니다...'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
-                    } else {
-                        $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
-                    }
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
-        }
+        $.post('https://script.google.com/macros/s/AKfycbzp1aew5Qa4Y_iSzXgXuLNdb79KC9KTGgvF6RgGKNaRfzXbsDx54ciAZyZP69b8JpU1SQ/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>오, 이런!</strong> 서버에 문제가 생겼습니다. '));
+            });
     });
 
 });
@@ -241,9 +205,9 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = {lat: 37.521813415351026, lng: 126.91914485010443};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 16,
         center: location,
         scrollwheel: false
     });
@@ -255,9 +219,9 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = {lat: 37.521813415351026, lng: 126.91914485010443};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 16,
         center: la_fiesta,
         scrollwheel: false
     });

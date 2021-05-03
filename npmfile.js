@@ -1,3 +1,3 @@
 exports.printMsg = function() {
-    console.log("Visit https://wedding.rampatra.com !");
+    console.log("https://byeoul.com 에 방문해주세요 !");
 };

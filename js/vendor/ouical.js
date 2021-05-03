@@ -27,41 +27,41 @@
                 '&sprop=&sprop=name:'
             ].join(''));
             return '<a class="icon-google" target="_blank" href="' +
-                href + '">Google Calendar</a>';
+                href + '">Google 캘린더</a>';
         },
 
-        yahoo: function(event) {
-            var eventDuration = event.end ?
-                ((event.end.getTime() - event.start.getTime())/ MS_IN_MINUTES) :
-                event.duration;
+        // yahoo: function(event) {
+        //     var eventDuration = event.end ?
+        //         ((event.end.getTime() - event.start.getTime())/ MS_IN_MINUTES) :
+        //         event.duration;
 
-            // Yahoo dates are crazy, we need to convert the duration from minutes to hh:mm
-            var yahooHourDuration = eventDuration < 600 ?
-                '0' + Math.floor((eventDuration / 60)) :
-                Math.floor((eventDuration / 60)) + '';
+        //     // Yahoo dates are crazy, we need to convert the duration from minutes to hh:mm
+        //     var yahooHourDuration = eventDuration < 600 ?
+        //         '0' + Math.floor((eventDuration / 60)) :
+        //         Math.floor((eventDuration / 60)) + '';
 
-            var yahooMinuteDuration = eventDuration % 60 < 10 ?
-                '0' + eventDuration % 60 :
-                eventDuration % 60 + '';
+        //     var yahooMinuteDuration = eventDuration % 60 < 10 ?
+        //         '0' + eventDuration % 60 :
+        //         eventDuration % 60 + '';
 
-            var yahooEventDuration = yahooHourDuration + yahooMinuteDuration;
+        //     var yahooEventDuration = yahooHourDuration + yahooMinuteDuration;
 
-            // Remove timezone from event time
-            var st = formatTime(new Date(event.start - (event.start.getTimezoneOffset() *
-                MS_IN_MINUTES))) || '';
+        //     // Remove timezone from event time
+        //     var st = formatTime(new Date(event.start - (event.start.getTimezoneOffset() *
+        //         MS_IN_MINUTES))) || '';
 
-            var href = encodeURI([
-                'http://calendar.yahoo.com/?v=60&view=d&type=20',
-                '&title=' + (event.title || ''),
-                '&st=' + st,
-                '&dur=' + (yahooEventDuration || ''),
-                '&desc=' + (event.description || ''),
-                '&in_loc=' + (event.address || '')
-            ].join(''));
+        //     var href = encodeURI([
+        //         'http://calendar.yahoo.com/?v=60&view=d&type=20',
+        //         '&title=' + (event.title || ''),
+        //         '&st=' + st,
+        //         '&dur=' + (yahooEventDuration || ''),
+        //         '&desc=' + (event.description || ''),
+        //         '&in_loc=' + (event.address || '')
+        //     ].join(''));
 
-            return '<a class="icon-yahoo" target="_blank" href="' +
-                href + '">Yahoo! Calendar</a>';
-        },
+        //     return '<a class="icon-yahoo" target="_blank" href="' +
+        //         href + '">야후 캘린더</a>';
+        // },
 
         ics: function(event, eClass, calendarName) {
             var startTime = formatTime(event.start);
@@ -82,12 +82,12 @@
                     'END:VCALENDAR'].join('\n'));
 
             return '<a class="' + eClass + '" target="_blank" href="' +
-                href + '">' + calendarName + ' Calendar</a>';
+                href + '">' + calendarName + ' 캘린더</a>';
         },
 
-        ical: function(event) {
-            return this.ics(event, 'icon-ical', 'iCal');
-        },
+        // ical: function(event) {
+        //     return this.ics(event, 'icon-ical', 'iCal');
+        // },
 
         outlook: function(event) {
             return this.ics(event, 'icon-outlook', 'Outlook');
@@ -97,8 +97,8 @@
     var generateCalendars = function(event) {
         return {
             google: calendarGenerators.google(event),
-            yahoo: calendarGenerators.yahoo(event),
-            ical: calendarGenerators.ical(event),
+            // yahoo: calendarGenerators.yahoo(event),
+            // ical: calendarGenerators.ical(event),
             outlook: calendarGenerators.outlook(event)
         };
     };
@@ -129,7 +129,7 @@
         var result = document.createElement('div');
 
         result.innerHTML = '<label id="add-to-calendar-label" for="checkbox-for-' +
-            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Add to Calendar</label>';
+            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; 캘린더에 일정 추가</label>';
         result.innerHTML += '<input name="add-to-calendar-checkbox" class="add-to-calendar-checkbox" id="checkbox-for-' + calendarId + '" type="checkbox">';
 
         Object.keys(calendars).forEach(function(services) {
