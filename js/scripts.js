@@ -51,6 +51,36 @@ $(document).ready(function () {
     }, {
         offset: '75%'
     });
+    $('.wp10').waypoint(function () {
+        $('.wp10').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp11').waypoint(function () {
+        $('.wp11').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp12').waypoint(function () {
+        $('.wp12').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp13').waypoint(function () {
+        $('.wp13').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp14').waypoint(function () {
+        $('.wp14').addClass('animated fadeInLeft');
+    }, {
+        offset: '75%'
+    });
+    $('.wp15').waypoint(function () {
+        $('.wp15').addClass('animated fadeInRight');
+    }, {
+        offset: '75%'
+    });
 
     /***************** Initiate Flexslider ******************/
     $('.flexslider').flexslider({
@@ -70,6 +100,13 @@ $(document).ready(function () {
 
     /***************** Tooltips ******************/
     $('[data-toggle="tooltip"]').tooltip();
+    
+    /***************** Button Popovers ******************/
+    $('[data-toggle="popover"]').popover({container: 'body'}); 
+
+    $(function(){
+        new ClipboardJS('.btn-copy');
+    });
 
     /***************** Nav Transformicon ******************/
     /* When user clicks the Icon */

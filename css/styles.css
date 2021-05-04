@@ -234,7 +234,7 @@ Animations
 /* ==========================================================================
 Waypoinsts
 ========================================================================== */
-.wp0, .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9 {
+.wp0, .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12, .wp13, .wp14, .wp15 {
   visibility: hidden; }
 
 .wp8, .wp9 {
@@ -643,74 +643,10 @@ Instagram
   width: 100%; }
 
 /* ==========================================================================
-Engagement Pics
+Gallery
 ========================================================================== */
-#eng-pics img {
-  width: 100%;
-  height: auto;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; }
-
-#eng-pics .img-wrap {
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px; }
-
-#eng-pics .img-wrap .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0; }
-
-#eng-pics .img-wrap i {
-  color: #fff;
-  font-size: 15px;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 6px;
-  right: 6px; }
-
-#eng-pics .img-wrap:hover img, #eng-pics .img-wrap:focus img {
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1); }
-
-#eng-pics .img-wrap:hover .overlay, #eng-pics .img-wrap:focus .overlay {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
-  filter: alpha(opacity=1);
-  opacity: 1;
-  z-index: 9; }
-
-#eng-pics .diamond {
-  width: 230px;
-  height: 230px;
-  position: absolute;
-  bottom: -145px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 500; }
-
-#eng-pics .ring {
-  width: 75px;
-  height: 75px;
-  border-radius: 75px;
-  border: 10px solid #d0d3d4;
-  position: absolute;
-  left: 34%;
-  top: 75%;
-  z-index: -1; }
+#gallery {
+  margin-bottom: 100px; }
 
 /* ==========================================================================
 Embed video
@@ -869,3 +805,17 @@ body.modal-open {
 
 .modal-body {
   padding: 25px; }
+
+/* ==========================================================================
+Icons
+========================================================================== */
+i.fa-clone {
+  margin-left: 5px; }
+
+.btn-copy {
+  background-color: white;
+  /* Blue background */
+  border: none;
+  /* Remove borders */
+  cursor: pointer;
+  /* Mouse pointer on hover */ }
