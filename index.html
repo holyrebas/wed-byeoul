@@ -405,32 +405,6 @@
         </div>
     </div>
 </section>
-<!-- 
-<section id="accounts" class="section-padding section-border">
-    <div class="text-center">
-        <h3>마음 전하기</h3>
-        <p>그 마음, 감사히 받겠습니다.</p>
-    </div>
-    <div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>신부에게</h5>
-                            <p><i class="fa fa-mobile"></i>KB국민 922902-01-189220 (김벼울)</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>신랑에게</h5>
-                            <p><i class="fa fa-mobile"></i>KB국민 652702-04-347993 (곽요한)<br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-</section>
 
 <section class="accounts section-padding" id="accounts">
     <div class="container">
@@ -440,7 +414,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <div class="wp3">
+                <div class="wp3 text-center">
                     <!-- <p><strong>만남의 시작 </strong></p> -->
                     <h5>신부에게<span class="time"> (김벼울)</span></h5>
                     <p>
@@ -449,7 +423,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                <div class="wp4">
+                <div class="wp4 text-center">
                     <!-- <p><strong>연애부터 결혼까지</strong></p> -->
                     <h5>신랑에게 <span class="time"> (곽요한)</span></h5>
                     <p>
@@ -552,20 +526,6 @@
 <script src="/js/jquery.waypoints.min.js"></script>
 <script src="/js/vendor/ouical.js"></script>
 <script src="/js/scripts.min.js"></script>
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSZtg1xYm7A6pw2xKHaOUeLrDG__1YgY&callback=initKakaoMap"></script> -->
-<script async defer src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=5a9ce7c6b18b0080f14423a5643f9ab0&callback"></script>
-<script>
-    var mapContainer = document.getElementById('map-canvas'),
-        mapOption = { 
-            center: new kakao.maps.LatLng(37.521813415351026, 126.91914485010443),
-            level: 3
-        };
-    var map = new kakao.maps.Map(mapContainer, mapOption);
-    var markerPosition  = new kakao.maps.LatLng(37.521813415351026, 126.91914485010443); 
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-    marker.setMap(map);
-    </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSZtg1xYm7A6pw2xKHaOUeLrDG__1YgY&callback=initMap"></script>
 </body>
 </html>
