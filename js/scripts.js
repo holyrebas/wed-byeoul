@@ -214,7 +214,13 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 16,
         center: location,
-        scrollwheel: false
+        scrollwheel: false,
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: true,
+        streetViewControl: false,
+        rotateControl: true,
+        fullscreenControl: true
     });
 
     var marker = new google.maps.Marker({
