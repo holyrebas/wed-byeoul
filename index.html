@@ -555,13 +555,13 @@
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSZtg1xYm7A6pw2xKHaOUeLrDG__1YgY&callback=initKakaoMap"></script> -->
 <script async defer src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=5a9ce7c6b18b0080f14423a5643f9ab0&callback"></script>
 <script>
-    var mapContainer = document.getElementById('map'),
+    var mapContainer = document.getElementById('map-canvas'),
         mapOption = { 
-            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            center: new kakao.maps.LatLng(37.521813415351026, 126.91914485010443),
             level: 3
         };
     var map = new kakao.maps.Map(mapContainer, mapOption);
-    var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+    var markerPosition  = new kakao.maps.LatLng(37.521813415351026, 126.91914485010443); 
     var marker = new kakao.maps.Marker({
         position: markerPosition
     });
