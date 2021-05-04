@@ -1,6 +1,11 @@
 $(document).ready(function () {
 
     /***************** Waypoints ******************/
+    $('.wp0').waypoint(function () {
+        $('.wp0').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
     }, {
