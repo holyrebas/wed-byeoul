@@ -368,7 +368,7 @@
         <h3>예식장 가기</h3>
         <p>6월 12일, 참석하실 예식장은 이곳입니다 :)</p>
     </div>
-    <div id="map-canvas"></div>
+    <div id="map-canvas" style="width: 100%; height: 350px;"></div>
     <div id="map-content-wrapper" class="container pointer-events-none">
         <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
@@ -551,7 +551,16 @@
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSZtg1xYm7A6pw2xKHaOUeLrDG__1YgY&callback=initMap"></script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSZtg1xYm7A6pw2xKHaOUeLrDG__1YgY&callback=initKakaoMap"></script> -->
+<script async defer type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5a9ce7c6b18b0080f14423a5643f9ab0&callback=initKakaoMap"></script>
+<!-- <script>
+    var container = document.getElementById('map-canvas'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.521813415351026, 126.91914485010443), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options);
+</script> -->
 </body>
 </html>
