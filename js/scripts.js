@@ -234,7 +234,7 @@ $(document).ready(function () {
             end: new Date('Jun 12, 2021 19:00'),
 
             // Event Address
-            address: '여의도웨딩컨벤션',
+            location: '여의도웨딩컨벤션',
 
             // Event Description
             description: "벼울과 요한의 아름다운 결혼식입니다."
