@@ -143,6 +143,11 @@ $(document).ready(function () {
     
     /***************** Button Popovers ******************/
     $('[data-toggle="popover"]').popover({container: 'body'}); 
+    $('[data-toggle="popover"]').click(function () {
+        setTimeout(function () {
+            $('.popover').fadeOut('slow');
+        }, 2000);
+    });
 
     $(function (){
         new ClipboardJS('.btn-copy');
