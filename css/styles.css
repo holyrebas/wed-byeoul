@@ -117,7 +117,8 @@ a {
 
 a:hover, a:focus {
   color: #232653;
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: bolder; }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -234,10 +235,10 @@ Animations
 /* ==========================================================================
 Waypoinsts
 ========================================================================== */
-.wp0, .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12, .wp13, .wp14, .wp15 {
+.wp0, .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12, .wp13, .wp14, .wp15, .wp16, .wp17, .wp18, .wp19, .wp20 {
   visibility: hidden; }
 
-.wp8, .wp9 {
+.wp7, .wp8, .wp9, .wp12, .wp14 {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s; }
 
@@ -346,8 +347,8 @@ Hero
   .hero .hero-content {
     padding-top: 20%; }
   .hero .hero-content img {
-    width: 55%;
-    margin-bottom: 12%; }
+    width: 100%;
+    margin-bottom: 5%; }
 
 .navigation {
   transition: all 300ms ease-in-out;
@@ -646,7 +647,7 @@ Instagram
 Gallery
 ========================================================================== */
 #gallery {
-  margin-bottom: 100px; }
+  margin-bottom: 0px; }
 
 /* ==========================================================================
 Embed video
@@ -695,6 +696,7 @@ Google map
   background: #fff;
   cursor: pointer;
   display: inline-block;
+  color: #232653;
   -webkit-transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
   transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s; }
 
@@ -746,13 +748,13 @@ RSVP form
       top: 50%;
       left: 30px;
       transform: translateY(-50%); }
-    .rsvp .rsvp-form .form-input-group i.fa-user, .rsvp .rsvp-form .form-input-group i.fa-users, .rsvp .rsvp-form .form-input-group i.fa-envelope, .rsvp .rsvp-form .form-input-group i.fa-commenting, .rsvp .rsvp-form .form-input-group .fa-key {
+    .rsvp .rsvp-form .form-input-group i.fa-user, .rsvp .rsvp-form .form-input-group i.fa-users, .rsvp .rsvp-form .form-input-group i.fa-envelope, .rsvp .rsvp-form .form-input-group i.fa-heart, .rsvp .rsvp-form .form-input-group i.fa-commenting, .rsvp .rsvp-form .form-input-group .fa-key {
       font-size: 14px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       margin-left: 20px; }
-    .rsvp .rsvp-form .form-input-group input {
+    .rsvp .rsvp-form .form-input-group input, .rsvp .rsvp-form .form-input-group select {
       padding-left: 68px;
       width: 100%;
       height: 100%;

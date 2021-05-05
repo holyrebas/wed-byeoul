@@ -81,6 +81,31 @@ $(document).ready(function () {
     }, {
         offset: '75%'
     });
+    $('.wp16').waypoint(function () {
+        $('.wp16').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp17').waypoint(function () {
+        $('.wp17').addClass('animated fadeInLeft');
+    }, {
+        offset: '75%'
+    });
+    $('.wp18').waypoint(function () {
+        $('.wp18').addClass('animated fadeInRight');
+    }, {
+        offset: '75%'
+    });
+    $('.wp19').waypoint(function () {
+        $('.wp19').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+    $('.wp20').waypoint(function () {
+        $('.wp20').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
 
     /***************** Initiate Flexslider ******************/
     $('.flexslider').flexslider({
@@ -131,13 +156,13 @@ $(document).ready(function () {
                 $('section.navigation').addClass('fixed');
                 $('header').css({
                     "border-bottom": "none",
-                    "padding": "35px 0"
+                    "padding": "20px 0"
                 });
                 $('header .member-actions').css({
-                    "top": "26px",
+                    "top": "12px",
                 });
                 $('header .navicon').css({
-                    "top": "34px",
+                    "top": "19px",
                 });
             } else {
                 $('section.navigation').removeClass('fixed');
@@ -252,12 +277,12 @@ function initMap() {
         zoom: 16,
         center: location,
         scrollwheel: false,
-        zoomControl: true,
+        zoomControl: false,
         mapTypeControl: false,
         scaleControl: true,
         streetViewControl: false,
         rotateControl: true,
-        fullscreenControl: true
+        fullscreenControl: false
     });
 
     var marker = new google.maps.Marker({
