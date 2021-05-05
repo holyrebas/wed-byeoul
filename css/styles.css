@@ -774,7 +774,7 @@ RSVP form
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      background: url("img/arrow.png") no-repeat 98% 50% #fff; }
+      background: url("../img/arrow.png") no-repeat 98% 50% #fff; }
     .rsvp .rsvp-form .form-input-group select::-ms-expand {
       display: none; }
 
