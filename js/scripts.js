@@ -143,9 +143,25 @@ $(document).ready(function () {
     
     /***************** Button Popovers ******************/
     $('[data-toggle="popover"]').popover({container: 'body'}); 
-    $('[data-toggle="popover"]').click(function () {
+    $('.copy-address').click(function () {
+        $('.copy-byeoul').popover('hide')
+        $('.copy-yohan').popover('hide')
         setTimeout(function () {
-            $('.popover').fadeOut('slow');
+            $('.copy-address').popover('hide')
+        }, 2000);
+    });
+    $('.copy-byeoul').click(function () {
+        $('.copy-address').popover('hide')
+        $('.copy-yohan').popover('hide')
+        setTimeout(function () {
+            $('.copy-byeoul').popover('hide')
+        }, 2000);
+    });
+    $('.copy-yohan').click(function () {
+        $('.copy-address').popover('hide')
+        $('.copy-byeoul').popover('hide')
+        setTimeout(function () {
+            $('.copy-yohan').popover('hide')
         }, 2000);
     });
 
