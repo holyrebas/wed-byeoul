@@ -714,7 +714,7 @@ Google map
 Accounts
 ========================================================================== */
 .account-number {
-  margin-left: 10px; }
+  margin-left: 30px; }
 
 /* ==========================================================================
 RSVP form
@@ -825,7 +825,7 @@ body.modal-open {
 Icons
 ========================================================================== */
 i.fa-clone {
-  margin-left: 5px; }
+  margin-left: 0px; }
 
 .btn-copy {
   background-color: white;
