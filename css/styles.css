@@ -770,6 +770,13 @@ RSVP form
       color: #BCC1C3; }
     .rsvp .rsvp-form .form-input-group input:-ms-input-placeholder {
       color: #BCC1C3; }
+    .rsvp .rsvp-form .form-input-group select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url("img/arrow.png") no-repeat 98% 50% #fff; }
+    .rsvp .rsvp-form .form-input-group select::-ms-expand {
+      display: none; }
 
 /* ==========================================================================
 Footer

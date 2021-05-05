@@ -798,6 +798,15 @@ RSVP form
       input:-ms-input-placeholder {
         color: $form-placeholder;
       }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none; 
+        appearance: none;
+        background: url('img/arrow.png') no-repeat 98% 50% #fff;
+      }
+      select::-ms-expand {
+        display: none; 
+      }
     }
   }
 }
