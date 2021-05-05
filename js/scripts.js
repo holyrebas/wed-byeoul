@@ -123,13 +123,28 @@ $(document).ready(function () {
         height: 800
     });
 
+    $(function () {
+        var today = moment(new Date()).format('YYYY-MM-DD');
+        var eventDay = moment('2021-06-12', 'YYYY-MM-DD');
+        var dDay = eventDay.diff(today, 'days');
+        var str;
+        if (dDay == 0) {
+            str = "축복의 시간, 드디어 오늘";
+        } else if (dDay < 0) {
+            str = "축복받은 후, D+" + Math.abs(dDay);
+        } else {
+            str = "축복의 시간까지, D-" + dDay;
+        }
+        $("#d-day").text(str);
+    });
+
     /***************** Tooltips ******************/
     $('[data-toggle="tooltip"]').tooltip();
     
     /***************** Button Popovers ******************/
     $('[data-toggle="popover"]').popover({container: 'body'}); 
 
-    $(function(){
+    $(function (){
         new ClipboardJS('.btn-copy');
     });
 
