@@ -47,6 +47,11 @@ body {
 *:focus {
   outline: none !important;
 }
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 ul, ol {
   margin: 0;
   padding: 0;
