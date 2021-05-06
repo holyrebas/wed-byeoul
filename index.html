@@ -113,7 +113,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>벼울 ♥ 요한, 결혼합니다!</h3>
+                <p>
+                    <span>김현중∙최남숙의 딸, 벼울</span><br/>
+                    <span>그리고</span><br/>
+                    <span>(故)곽한진∙신명숙의 아들, 요한</span>
+                </p>
+                <h3 style="margin-top: -10px; margin-bottom: 20px;">벼울 ♥ 요한, 결혼합니다!</h3>
                 <p>
                     <span>2021년 6월 12일 토요일 오후 5시</span>
                     <br/>
@@ -220,7 +225,7 @@
                     <p>
                         한 달간, 서로의 마음을 확인하다가 결국 연애를 시작했습니다.<br/>
                         알콩달콩 하게 데이트를 즐기면서도, 회사 동기들에게는 철저히 비밀이었던 재밌는 연애였습니다.
-                        연애 기간 내내 COVID-19가 우리를 괴롭혔지만, 우리의 결속은 더욱 단단해졌습니다.
+                        연애 기간 내내 코로나19가 우리를 괴롭혔지만, 우리의 결속은 더욱 단단해졌습니다.
                     </p>
                 </div>
                 <div class="wp6">
@@ -424,7 +429,10 @@
                         </div>
                     </div>
                     <div class="row text-center">
-                        <div class="col-md-12" style="padding: 5px;">
+                        <div class="col-md-6" style="padding: 5px;">
+                            <a data-toggle="modal" data-target="#map-modal" class="btn btn-fill btn-small"><i class="fa fa-map-o"></i>&nbsp;&nbsp;약도 보기</a>
+                        </div>
+                        <div class="col-md-6" style="padding: 5px;">
                             <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;지도 보기</a>
                         </div>
                     </div>
@@ -432,6 +440,37 @@
             </div>
         </div>
     </div>
+    <div id="map-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">오시는 길</h3>
+                    <img src="img/map.jpg" alt="약도" style="width:100%;"/>
+                    <p>
+                        <span>
+                            <br/>
+                            <b>내비게이션 주소</b><br/>
+                            서울시 영등포구 여의대로 14<br/>
+                            <i>(서울시 영등포구 여의도동 28-2)</i><br/><br/>
+                            <b>지하철</b><br/>
+                            5호선 & 9호선 여의도역 2번 출구<br/>
+                            <i>하나금융투자 건물사이로 들어가신 후, 주차장 입구로 나오셔서, 
+                            위를 쳐다보시면 Marriott와 KT 빌딩이 보입니다. 
+                            예식장은 KT 빌딩 3층에 위치하고 있습니다.</i><br/><br/>
+                            <b>버스</b><br/>
+                            전경련회관 앞 정류장 하차<br/>
+                            <i>간선(파랑): 160, 162, 360, 503, 600, 662<br/>
+                            지선(초록): 5012, 5618, 5713, 6513, 6628<br/>
+                            일반버스: 10, 11-1, 11-2, 530, 83, 88<br/>
+                            좌석버스: 301, 302, 871, 700</i><br/>
+                        </span>
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </section>
 
 <div class="container">
@@ -445,7 +484,8 @@
         <div class="row text-center">
             <h3>마음 전하기</h3>
             <p class="wp16">
-                그 마음, 감사히 받겠습니다.<br/>
+                코로나19로 인해 부득이하게 적습니다.<br/>
+                보내주신 마음, 감사히 받겠습니다.<br/>
                 직접 뵈지 못해 아쉽네요... 따로 인사드리겠습니다!
             </p>
         </div>
@@ -453,9 +493,25 @@
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp17 text-center">
                     <!-- <p><strong>만남의 시작 </strong></p> -->
-                    <h5>신부에게 <span class="time"></span></h5>
+                    <h5>신부측 <span class="time"></span></h5>
                     <p>
-                        KB국민 (김벼울)<br/>
+                        SC제일 (혼주, 김현중)<br/>
+                        <span class="account-number">302-20-152565</span>
+                        <button
+                            class="copy-byeoul-father btn-copy"
+                            title="복사 완료"
+                            data-toggle="popover"
+                            data-placement="left"
+                            data-content="SC제일 (김현중)<br/>302-20-152565"
+                            data-clipboard-text="30220152565"
+                            data-html="true"
+                        >
+                            <i class="fa fa-clone"></i>
+                        </button>
+                        
+                    </p>
+                    <p>
+                        KB국민 (신부, 김벼울)<br/>
                         <span class="account-number">922902-01-189220</span>
                         <button
                             class="copy-byeoul btn-copy"
@@ -475,9 +531,24 @@
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp18 text-center">
                     <!-- <p><strong>연애부터 결혼까지</strong></p> -->
-                    <h5>신랑에게 <span class="time"></span></h5>
+                    <h5>신랑측 <span class="time"></span></h5>
                     <p>
-                        KB국민 (곽요한)<br/>
+                        IBK기업 (혼주, 신명숙)<br/>
+                        <span class="account-number">010-2469-3927</span>
+                        <button
+                            class="copy-yohan-mother btn-copy"
+                            title="복사 완료"
+                            data-toggle="popover"
+                            data-placement="left"
+                            data-content="IBK기업 (신명숙)<br/>010-2469-3927"
+                            data-clipboard-text="01024693927"
+                            data-html="true"
+                        >
+                            <i class="fa fa-clone"></i>
+                        </button>
+                    </p>
+                    <p>
+                        KB국민 (신랑, 곽요한)<br/>
                         <span class="account-number">652702-04-347993</span>
                         <button
                             class="copy-yohan btn-copy"

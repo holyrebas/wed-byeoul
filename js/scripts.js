@@ -146,23 +146,47 @@ $(document).ready(function () {
     $('.copy-address').click(function () {
         $('.copy-byeoul').popover('hide')
         $('.copy-yohan').popover('hide')
+        $('.copy-byeoul-father').popover('hide')
+        $('.copy-yohan-mother').popover('hide')
         setTimeout(function () {
             $('.copy-address').popover('hide')
-        }, 2000);
+        }, 3000);
     });
     $('.copy-byeoul').click(function () {
         $('.copy-address').popover('hide')
         $('.copy-yohan').popover('hide')
+        $('.copy-byeoul-father').popover('hide')
+        $('.copy-yohan-mother').popover('hide')
         setTimeout(function () {
             $('.copy-byeoul').popover('hide')
-        }, 2000);
+        }, 3000);
     });
     $('.copy-yohan').click(function () {
         $('.copy-address').popover('hide')
         $('.copy-byeoul').popover('hide')
+        $('.copy-byeoul-father').popover('hide')
+        $('.copy-yohan-mother').popover('hide')
         setTimeout(function () {
             $('.copy-yohan').popover('hide')
-        }, 2000);
+        }, 3000);
+    });
+    $('.copy-yohan-mother').click(function () {
+        $('.copy-address').popover('hide')
+        $('.copy-byeoul').popover('hide')
+        $('.copy-byeoul-father').popover('hide')
+        $('.copy-yohan').popover('hide')
+        setTimeout(function () {
+            $('.copy-yohan-mother').popover('hide')
+        }, 3000);
+    });
+    $('.copy-byeoul-father').click(function () {
+        $('.copy-address').popover('hide')
+        $('.copy-yohan').popover('hide')
+        $('.copy-byeoul').popover('hide')
+        $('.copy-yohan-mother').popover('hide')
+        setTimeout(function () {
+            $('.copy-byeoul-father').popover('hide')
+        }, 3000);
     });
 
     $(function (){
@@ -311,7 +335,7 @@ $(document).ready(function () {
 function initMap() {
     var location = {lat: 37.521813415351026, lng: 126.91914485010443};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 16,
+        zoom: 15,
         center: location,
         scrollwheel: false,
         zoomControl: false,
