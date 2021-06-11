@@ -138,6 +138,40 @@ $(document).ready(function () {
         $("#d-day").text(str);
     });
 
+    $(function () {
+        var countDownDate = new Date("Jun 12, 2021 17:00:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            hours = 24*days + hours;
+            var hour = "";
+            if (hours > 0) {
+                hour = String(hours) + "시간 ";
+            }
+            var minute = "";
+            if (minutes > 0) {
+                minute = String(minutes) + "분 ";
+            }
+            var second = "";
+            if (seconds > 0) {
+                second = String(seconds) + "초 ";
+            }
+
+            document.getElementById("timer").innerHTML = " (" + hour + minute + second + " 남았음)";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "";
+            }
+        }, 1000);
+    });
+
     /***************** Tooltips ******************/
     $('[data-toggle="tooltip"]').tooltip();
     
